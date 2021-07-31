@@ -1,0 +1,642 @@
+:root {
+    --text1 : calc(2vw + 0.75rem);
+    --text2 : calc(1.5vw + 0.75rem);
+    --text3 : calc(1vw + 0.75rem);
+    --text4 : calc(0.5vw + 0.75rem);
+    --text5 : 0.75rem;
+    --color1 : rgba(255,255,255,0.75);
+    --color2 : rgba(0,0,0,0.75);
+    --color3 : rgba(255, 255, 0, 0.755);
+    --color4 : rgba(0, 255, 0, 0.75);
+    --color5 : darkviolet;
+}
+* {
+    margin : 0;
+    padding : 0;
+    text-decoration : none; 
+    list-style : none;
+    font-weight: lighter;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif; 
+}
+html {
+    overflow-x : hidden;
+}
+h1,h2,h3,h4 {
+font-family : 'Open Sans Condensed', Arial;
+}
+h1 {
+font-size: var(--text1);
+}
+h2 {
+font-size: var(--text2);
+}
+h3 {
+font-size: var(--text3);
+}
+h4 {
+font-size: var(--text4);
+}
+.button {
+    padding : 0.25rem 0.5rem;
+    border-radius : 5px;
+    cursor : pointer;
+    display : inline-block;
+}
+.button:hover{
+    transform : scale(1.1);
+    box-shadow : black 0px 5px 15px;
+    transition : 0.2s ease-in-out;
+}
+.button1:hover{
+    background-color: var(--color1);
+    color : var(--color5);
+}
+.button:active{
+    transform : scale(0.9);
+    box-shadow : black 0px 0px 0px;
+    transition : 0.2s ease-in-out;
+}
+.top {
+    background-image: url("./images/image (4).jpg");
+    background-size: 100% 100vh;
+    background-attachment: fixed;
+}
+section {
+    height : 100vh;
+    width : 100%;
+}
+body {
+    background-image: url("./images/image (4).jpg");
+    background-size: 100% 100vh;
+    box-shadow:inset 0 0 0 2000px rgba(255, 255, 255, 0.8);
+    background-attachment: fixed;
+
+}
+.hover *:hover , .hover *:hover *{
+    color : var(--color1);
+    transition : 0.2s ease-in-out;
+    transform : scale(1.01);
+}
+.hover *:active , .hover *:active *{
+    transition : 0.2s ease-in-out;
+    transform : scale(0.9);
+}
+.magic {
+    opacity : 0;
+}
+.product-magic {
+    transform : translateX(0);
+    animation : 1s ease-in-out fade;
+    opacity : 1 !important;
+    transition : opacity 0.2s ease-in-out;
+}
+.product-magic1 {
+    transform : translateX(0);
+    animation : 1s ease-in-out fade1;
+    opacity : 1 !important;
+    transition : opacity 0.2s ease-in-out;
+}
+#navbar {
+    height : 7rem;
+    width : 100%;
+    background-color: var(--color2);
+    display : grid;
+    position: fixed;
+    justify-content: center;
+    align-content: center;
+    border-bottom : 1px black solid;
+    transition : all 0.3s ease-in-out;
+    z-index: 10;
+    grid-template-columns: 25% 50% 25%;
+    box-shadow: black 0px 5px 15px;
+    animation : down 1s ease-out;
+    top : 0;
+}
+.navbar {
+    height : 5rem !important;
+    background-color: var(--color1) !important;
+}
+.navbar * {
+    color : var(--color2);
+}
+.navbar .navbar2 h1 {
+    color: var(--color2);
+}
+.navbar .hover *:hover , .navbar .hover *:hover *{
+    color : black;
+    transition : 0.2s ease-in-out;
+    transform : scale(1.01);
+}
+.navbar .button1:hover {
+    background-color: var(--color2);
+}
+.navbar .hover *:active , .navbar .hover *:active *{
+    transition : 0.2s ease-in-out;
+    transform : scale(0.9);
+}
+.navbar1 a, .navbar1 i {
+    font-size: var(--text4);
+}
+.navbar1 a {
+    display : block;
+    margin : 1rem;
+}
+.navbar2 h1 {
+    color: var(--color1);
+    transform : translateY(-50%);
+    position : relative;
+    top : 50%;
+}
+.navbar .navbar2 h1{
+    font-size : var(--text2);
+}
+.navbar3 {
+    display : flex;
+    align-items : center;
+    justify-content : flex-end;
+    margin-right : 1rem;
+}
+.navbar3 a{
+    margin : 0 0.5rem;
+}
+.menu {
+    display : none;
+    cursor : pointer;
+}
+.bottom {
+    display : none;
+}
+.box {
+    padding : 10rem 2rem 0;
+    width : 40%;
+    margin-left : 60%;
+    position: absolute;
+    background-color : var(--color1);
+    height : 100%;
+}
+.box div {
+    margin-bottom : 10rem;
+}
+.box div h1 i {
+    font-size : 10rem;
+    color : var(--color2);
+    float : left;
+    margin-right : 1rem
+
+}
+.box div h1 {
+    color : var(--color2);
+}
+.box1 {
+    width : calc(100% - 2rem);
+    height : 100vh;
+    background-color : var(--color2);
+    margin : 0 1rem 0;
+    padding : 2rem;
+    display: flex;
+    flex-direction : row;
+    margin-bottom : 7rem
+}
+.box1 div:nth-of-type(1) {
+    width : 40%;
+}
+.box1 div:nth-of-type(2) {
+    background-image: url("./images/church.jpg");
+    background-size: 60% 100%;
+    width : 60%;
+    height: 100%;
+    background-attachment: fixed;
+    background-position : -20rem 5rem;
+    box-shadow: inset 5px 5px 5px black;
+}
+.box1 h1:nth-of-type(2) {
+    color : var(--color3);
+}
+.flex {
+    display: flex;
+    justify-content : space-around;
+    background-color: var(--color2);
+    padding : 6rem 1rem 1rem;
+    margin : 1rem 1rem 0;
+}
+.flex h2 {
+    background-color: var(--color2);
+    width : calc(100% - 1rem);
+    color : var(--color4);
+    padding : 0 1rem;
+    box-shadow: var(--color2) 2px 2px 2px;
+}
+.flex > div {
+    width : 24%;
+    height : 12rem;
+    box-shadow: black 0px 5px 15px;
+    
+}
+.flex div img {
+    width : 100%;
+    height : 100%;
+}
+.flex div h2 {
+    position : relative;
+    top : -3rem;
+    left : 1rem;
+}
+.front {
+    width : 80%;
+    margin : 1rem auto;
+}
+.front img {
+    object-fit : contain;
+    width : 40%;
+    float : left;
+    margin-right: 2rem;
+}
+.front figcaption {
+    border : 0;
+}
+.front figcaption h1 {
+    color : var(--color2) !important;
+}
+.front h2 {
+    color : var(--color2);
+    display : block;
+    border-bottom: var(--color2) 2px solid;
+}
+.front h2 i {
+    color : inherit;
+    font-size : inherit;
+    margin-left : 1rem;
+}
+.image-gallery{
+    display : grid;
+    grid-gap : 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    height : auto;
+    margin : 9rem auto 2rem;
+    width : calc(100% - 4rem);
+}
+.image-gallery-2 {
+    position : relative;  
+}
+.image-gallery h1 {
+    margin : 1rem;
+    color : var(--color2);
+    position : absolute;
+}
+.image-gallery figcaption {
+    position : relative;
+    top: -20%;
+}
+.image-gallery figcaption h1 {
+    padding : 2%;
+    border-radius : 5px;
+}
+.image-gallery div:nth-child(1) {
+    position : relative;
+}
+.image-gallery div {
+    display : flex;
+    align-content : flex-start;
+}
+.image-gallery div img {
+    width : 100%;
+    object-fit : contain;
+    filter : drop-shadow(var(--color3) 5px 5px 2px); 
+}
+.image-gallery div:nth-child(2n+1) img{
+    filter : drop-shadow(var(--color4) 5px 5px 2px);
+}
+.front{
+    top : -100% !important;
+    right : calc(-100% - 1rem)
+}
+@media screen and (min-width: 600px) {
+    .span-taller{
+    grid-row: span 2 / auto;
+    }
+    .span-wider{
+    grid-column : span 2 / auto;
+    }
+    .image-gallery-2 {
+    transform : scale(0.8);
+    transform-origin : 60% -70%;
+    }
+    .image-gallery-1{
+        transform: scale(0.8);
+        transform-origin : 60% -20%;
+    }
+}
+.last {
+    position :relative;
+    background-image: url("./images/0001.jpg");
+    background-size: 100% 100%;
+}
+.last .church{
+    position : absolute;
+    font-size : 1.5rem;
+    z-index: 1;
+    top : 48.5%;
+    left : 9.6%; 
+    padding : 0.5rem;
+    border-radius: 5px;
+    cursor : pointer;
+}
+.last .church i {
+    color : yellow;
+    display : inline-block;
+    font-weight: bold;
+}
+.last .church p {
+    color : yellow;
+    display : inline-block;
+    letter-spacing : 2px;
+    font-family: Helvetica, sans-serif;
+    opacity : 0.7;
+}
+.last .footer {
+    padding : 2% 1rem 1rem;
+    position : absolute;
+    bottom : 0;
+    width : 100%;
+    height : 30%;
+    background-color : black;
+    opacity : 0.7;
+    display : grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    grid-gap : 1rem;
+    border-top: 2px solid darkgray;
+    box-shadow: 13px -11px 35px 0px rgba(0,0,0,1);
+-webkit-box-shadow: 13px -11px 35px 0px rgba(0,0,0,1);
+-moz-box-shadow: 13px -11px 35px 0px rgba(0,0,0,1);
+}
+.footer h1 i {
+    font-size : inherit;
+}
+.footer div {
+    padding-left : 10%;
+}
+.footer div a {
+    display : block;
+    margin-top: 1vw;
+}
+.footer3 span i {
+    font-size : var(--text2);
+    margin-right : var(--text1);
+    color : var(--color3);
+    opacity : 0.7;
+    margin-top : 1vw;
+    cursor : pointer;
+}
+.footer3 span i:hover {
+    transform : scale(1.05);
+}
+.footer3 span i:active{
+    transform : scale(0.95);
+    transition : 0.2s ease-in-out;
+}
+.footer a:hover {
+    transform : scale(1.05);
+    transition : 0.2s ease-in-out;
+    cursor: pointer;
+    text-decoration : underline;
+    color : var(--color1);
+}
+.footer a:active {
+    transform : scale(0.95);
+    transition : 0.2s ease-in-out;
+}
+@keyframes down {
+    from {
+        transform: translateY(-7rem);
+    }
+    to {
+        transform : translateY(0);
+    }
+}
+@keyframes up {
+    from {
+        transform: translateY(0)
+    }
+    25% {
+        transform: translateY(-0.5rem)
+    }
+    to {
+        transform : translateY(0);
+    }
+}
+@keyframes right {
+    from {
+        transform : translateX(0);
+    }
+    50% {
+        transform : translateX(3rem);
+    }
+    to {
+        transform : translateX(0);
+    }
+}
+@keyframes left {
+    from {
+        transform : translateX(0);
+    }
+    50% {
+        transform : translateX(-3rem);
+    }
+    to {
+        transform : translateX(0);
+    }
+}
+@keyframes fade {
+    from {
+        opacity : 0;
+        transform : translateX(-10rem);
+    }
+    to {
+        opacity : 1;
+        transform : translateX(0);
+    }
+}
+@keyframes fade1 {
+    from {
+        opacity : 0;
+        transform : translateX(10rem);
+    }
+    to {
+        opacity : 1;
+        transform : translateX(0);
+    }
+}
+@media only screen and (max-width:450px) {
+    body {
+        background-image: url("./images/crop2.png") !important;
+    }
+    .top {
+        background-image: url("./images/crop3.jpg") !important;
+    }
+    #navbar {
+        width : 100vw;
+    }
+    .navbar1 {
+        display : none;
+    }
+    .navbar2 {
+        grid-column : 1/4;
+        text-align : center; 
+    }
+    .navbar3 {
+        grid-column: 1/4;
+        display : flex !important;
+        justify-content : flex-start;
+        margin-top : 0.5rem;
+    }
+    .navbar3 a {
+        background-color: var(--color1);
+        color : var(--color5);
+    }
+    .navbar .navbar3 a {
+        background-color: var(--color2);
+        color : var(--color3);
+    }
+    .menu {
+        display : block;
+        margin : 0 0 0 auto; 
+    }
+    .bottom {
+        display : flex !important;
+        position : fixed;
+        width : 100vw;
+        height : 3rem;
+        background-color : var(--color2);
+        margin-top : calc(100vh - 6rem);
+        z-index : 1000;
+        justify-content : space-around;
+        align-items : center;
+    }
+    .bottom a {
+        font-size : var(--text1);
+    }
+    .bottom a i {
+        font-size : inherit;
+        color : var(--color5);
+        background-color : var(--color2);
+        padding : 0.5rem 1.25rem;
+        border-radius: 0.25rem;
+        box-shadow : black 0px 5px 15px;
+    }
+    .last .footer {
+        grid-template-rows: 1fr 1fr 2fr 1fr 1fr !important;
+        grid-template-columns: 1fr !important;
+        height : 100% !important;
+        padding : 2rem 0;
+    }
+    .last span {
+        display : none;
+    }
+    .bar1, .bar2, .bar3 {
+        width : calc(var(--text2) * 2);
+        height : 4px;
+        background-color : var(--color1);
+        margin : 5px 0;
+        transition : 0.4s;
+    }
+    .navbar .bar1, .navbar .bar2, .navbar .bar3{
+        background-color : var(--color2);
+    }
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-6px, 6px) ;
+        transform: rotate(-45deg) translate(-6px, 6px) ;
+        background-color : var(--color5);
+      }
+      .change .bar2 {
+        opacity: 0;
+      }
+      .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-7px, -8px) ;
+        transform: rotate(45deg) translate(-7px, -8px) ;
+        background-color : var(--color5);
+      }
+    #modal {
+        width : 100vw;
+        height : 100vh;
+        position : fixed;
+        right : 100vw;
+        transition : 0.2s ease-in;
+        opacity : 0;
+        z-index: 10;
+    }
+    .modal-right {
+        right : auto !important;
+        opacity: 1 !important;
+    }
+    .modal-inside {
+        width : 100vw;
+        height : auto;
+        background-color : var(--color2);
+        z-index : 100;
+        margin-top : 7rem;
+        display : flex;
+        flex-direction: column;
+    }
+    .modal-inside a {
+        font-size : var(--text1);
+        color : var(--color3);
+        margin : 1rem;
+        text-decoration: underline;
+    }
+    .flex {
+        flex-direction: column;
+        padding : 1rem;
+    }
+    .flex > div {
+        width : 80%;
+        height : 7rem;
+        margin : 1rem auto;
+    }
+    .flex div a h2{
+        top : -2rem;
+        left : 0;
+        margin : auto;
+        width : 100%;
+    }
+    .box1 {
+        flex-direction: column;
+        height : auto !important;
+        padding : 1rem 1px;
+        margin-bottom: 2rem;
+    }
+    .box1 > div {
+        width : 100% !important;
+    }
+    .box1 > div:nth-child(1) {
+        padding : 1rem;
+    }
+    .box11 {
+        height : 700px !important;
+        background-size : 100% 90% !important;
+        background-position: 0 5rem !important;
+    }
+    .box {
+        margin : 0;
+    }
+    .front h2{
+        display : flex;
+        justify-content : space-between;
+    }
+    .front h2 i {
+        margin : 0;
+    }
+    .front figure img {
+        width : 100%;
+        margin-bottom : 1rem;
+    }
+    iframe {
+        width : 100%;
+        margin : auto;
+    }
+    .image-gallery {
+        grid-gap : 1rem;
+    }
+}
