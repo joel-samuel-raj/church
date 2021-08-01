@@ -219,7 +219,7 @@ body {
     margin-left : 60%;
     position: absolute;
     background-color : var(--color1);
-    height : 100vh;
+    height : inherit;
 }
 .box div {
     margin-bottom : 10rem;
