@@ -388,7 +388,8 @@ iframe {
 }
 .front{
     top : -100% !important;
-    right : calc(-100% - 1rem)
+    right : calc(-100% - 1rem);
+    z-index : 100000;
 }
 @media screen and (min-width: 600px) {
     .span-taller{
@@ -677,7 +678,6 @@ iframe {
         transition : 0.5s ease-in;
         opacity : 0;
         z-index: 10;
-        display: block;
     }
     .modal-right {
         transform : translateY(0) !important;
