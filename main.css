@@ -682,6 +682,7 @@ iframe {
     .modal-right {
         transform : translateY(0) !important;
         opacity: 1 !important;
+        display: block !important;
     }
     .modal-inside {
         width : 100vw;
