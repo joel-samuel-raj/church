@@ -23,6 +23,7 @@
 }
 html {
     overflow-x : hidden;
+    scroll-behavior : smooth;
 }
 h1,h2,h3,h4 {
 font-family : 'Open Sans Condensed', Arial;
@@ -71,7 +72,7 @@ section {
 body {
     background-image: url("./images/image (4).jpg");
     background-size: 100% 100vh;
-    box-shadow:inset 0 0 0 2000px rgba(255, 255, 255, 0.8);
+    box-shadow:inset 0 0 0 2000px rgba(255, 255, 255, 0.95);
     background-attachment: fixed;
 
 }
@@ -101,7 +102,7 @@ body {
 }
 #navbar {
     height : 7rem;
-    width : 100%;
+    width : 100vw;
     background-color: var(--color2);
     display : grid;
     position: fixed;
@@ -162,11 +163,54 @@ body {
 .navbar3 a{
     margin : 0 0.5rem;
 }
+.mic {
+    position : absolute;
+    margin : 10rem 5rem;
+}
+.mic figure {
+    margin-bottom : 2rem;
+    display : flex;
+}
+.mic img {
+    box-shadow : black 0px 5px 15px;
+}
+.mic figcaption {
+    margin-top : 1rem;
+    color : var(--color5);
+    font-size: var(--text3);
+    padding : 1rem;
+    background-color : var(--color2);
+    height : calc(var(--text3) + 2rem);
+    border-radius : 0rem 0.5rem 0.5rem 0rem
+
+}
+.ministry {
+    margin : auto;
+    width : 80%;
+    transform : translateY(10rem);
+}
+.ministry h1,h2,h3,p {
+    color : white;
+}
+.ministry h2 {
+    background-color : var(--color2);
+    padding : 1rem;
+    color : var(--color3);
+    box-shadow: inset 0px 5px 15px black;
+    margin : 2rem 0 0;
+}
+.ministry hr {
+    color : yellow;
+    box-shadow: 0px 5px 15px var(--color3);
+}
 .menu {
     display : none;
     cursor : pointer;
 }
 .bottom {
+    display : none;
+}
+#modal {
     display : none;
 }
 .box {
@@ -215,6 +259,9 @@ body {
 .box1 h1:nth-of-type(2) {
     color : var(--color3);
 }
+.flex a {
+    display : block;
+}
 .flex {
     display: flex;
     justify-content : space-around;
@@ -246,13 +293,16 @@ body {
 }
 .front {
     width : 80%;
-    margin : 1rem auto;
+    margin : 1rem auto 2rem;
 }
 .front img {
     object-fit : contain;
     width : 40%;
     float : left;
     margin-right: 2rem;
+}
+.front figure {
+    min-height: 350px;
 }
 .front figcaption {
     border : 0;
@@ -263,20 +313,47 @@ body {
 .front h2 {
     color : var(--color2);
     display : block;
-    border-bottom: var(--color2) 2px solid;
 }
-.front h2 i {
-    color : inherit;
+.front h2 a i {
+    color : var(--color2);
+    font-size : var(--text2);
+    margin-left : 1.5rem;
+}
+.front figure figcaption a {
     font-size : inherit;
-    margin-left : 1rem;
+    color : green;
+    font-family : inherit;
+    text-decoration: underline;
+    cursor : pointer;
+}
+.announ{
+    font-family: "open sans" !important;
+    font-size : var(--text4) !important;
+}
+.heading {
+    color : white !important;
+    background-color : var(--color2);
+    white-space : nowrap;
+    width : auto !important;
+    display : inline-block !important;
+    padding : 0.125rem 1rem;
+    max-width: 90%;
+}
+hr {
+    margin :0.25rem 0;
+    color : var(--color2);
+    background-color : var(--color2);
 }
 .image-gallery{
     display : grid;
     grid-gap : 5rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
     height : auto;
-    margin : 9rem auto 2rem;
+    margin : 1rem auto 4rem;
     width : calc(100% - 4rem);
+}
+iframe {
+    width : 100% !important;
 }
 .image-gallery-2 {
     position : relative;  
@@ -324,10 +401,6 @@ body {
     transform : scale(0.8);
     transform-origin : 60% -70%;
     }
-    .image-gallery-1{
-        transform: scale(0.8);
-        transform-origin : 60% -20%;
-    }
 }
 .last {
     position :relative;
@@ -362,8 +435,7 @@ body {
     bottom : 0;
     width : 100%;
     height : 30%;
-    background-color : black;
-    opacity : 0.7;
+    background-color : var(--color2);
     display : grid;
     grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
     grid-gap : 1rem;
@@ -377,6 +449,7 @@ body {
 }
 .footer div {
     padding-left : 10%;
+    padding-right : 10%;
 }
 .footer div a {
     display : block;
@@ -407,6 +480,42 @@ body {
 .footer a:active {
     transform : scale(0.95);
     transition : 0.2s ease-in-out;
+}
+.footer3 iframe {
+    height : 100%;
+    opacity : 1;
+} 
+.pay {
+    width : 70%;
+    height : 30vw;
+    position : relative;
+    top : 50%;
+    transform : translateY(-50%);
+    display : flex;
+    margin : auto;
+    border : black solid;
+    padding : 1rem;
+}
+.pay img {
+    width : auto;
+    height : 100%;
+    object-fit : contain;
+    filter: drop-shadow( inset black 0px 5px 15px);
+}
+.paybox {
+    padding : 1rem;
+}
+.paybox h2 {
+    color : var(--color2);
+}
+.paybox h2 a{
+    color : inherit;
+    font-size : inherit;
+    font-family: inherit;
+}
+.paybox h2 a i{
+    color : inherit;
+    font-size : inherit;
 }
 @keyframes down {
     from {
@@ -472,6 +581,8 @@ body {
 @media only screen and (max-width:450px) {
     body {
         background-image: url("./images/crop2.png") !important;
+        overflow-x: hidden;
+       
     }
     .top {
         background-image: url("./images/crop3.jpg") !important;
@@ -510,7 +621,7 @@ body {
         width : 100vw;
         height : 3rem;
         background-color : var(--color2);
-        margin-top : calc(100vh - 6rem);
+        margin-top : calc(100vh - 3rem);
         z-index : 1000;
         justify-content : space-around;
         align-items : center;
@@ -554,21 +665,22 @@ body {
         opacity: 0;
       }
       .change .bar3 {
-        -webkit-transform: rotate(45deg) translate(-7px, -8px) ;
-        transform: rotate(45deg) translate(-7px, -8px) ;
+        -webkit-transform: rotate(45deg) translate(-7px, -7px) ;
+        transform: rotate(45deg) translate(-7px, -7px) ;
         background-color : var(--color5);
       }
     #modal {
         width : 100vw;
         height : 100vh;
         position : fixed;
-        right : 100vw;
-        transition : 0.2s ease-in;
+        transform : translateY(-20rem);
+        transition : 0.5s ease-in;
         opacity : 0;
         z-index: 10;
+        display: block;
     }
     .modal-right {
-        right : auto !important;
+        transform : translateY(0) !important;
         opacity: 1 !important;
     }
     .modal-inside {
@@ -579,12 +691,14 @@ body {
         margin-top : 7rem;
         display : flex;
         flex-direction: column;
+        box-shadow: inset 0px 5px 15px black;
     }
     .modal-inside a {
         font-size : var(--text1);
         color : var(--color3);
-        margin : 1rem;
+        margin : 0.5rem;
         text-decoration: underline;
+        padding : 0.5rem;
     }
     .flex {
         flex-direction: column;
@@ -638,5 +752,22 @@ body {
     }
     .image-gallery {
         grid-gap : 1rem;
+        grid-template-columns : 1fr !important
+    }
+    .mic {
+        display : none;
+    }
+    .box div{
+        margin-bottom : 1rem;
+    }
+    .box i{
+        font-size : 6rem !important;
+    }
+    .ministry h1 {
+        color : black;
+    }
+    .pay {
+        flex-direction: column;
+        height : auto;
     }
 }

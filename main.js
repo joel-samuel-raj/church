@@ -43,3 +43,6 @@ window.addEventListener("scroll", () => {
         document.getElementsByClassName("modal-inside")[0].style.marginTop = "7rem";
     }
 })
+/************************************************************/
+
+/*************************SLIDE*******************************/
