@@ -66,7 +66,7 @@ font-size: var(--text4);
     background-attachment: fixed;
 }
 section {
-    height : 100vh;
+    min-height : 100vh;
     width : 100%;
 }
 body {
@@ -188,9 +188,25 @@ body {
     margin : auto;
     width : 80%;
     transform : translateY(10rem);
+    margin-bottom: 11rem;
 }
 .ministry h1,h2,h3,p {
     color : white;
+}
+.ministry h1 {
+    color : var(--color5);
+}
+.minis {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    grid-gap : 0.5rem !important;
+    margin : auto;
+    width : 80% !important;
+}
+.minis img {
+    width : 100%;
+    height : auto;
+    object-fit: contain;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.8)
 }
 .ministry h2 {
     background-color : var(--color2);
@@ -435,7 +451,7 @@ iframe {
     position : absolute;
     bottom : 0;
     width : 100%;
-    height : 30%;
+    height : auto;
     background-color : var(--color2);
     display : grid;
     grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
@@ -445,8 +461,12 @@ iframe {
 -webkit-box-shadow: 13px -11px 35px 0px rgba(0,0,0,1);
 -moz-box-shadow: 13px -11px 35px 0px rgba(0,0,0,1);
 }
+.footer h1 {
+    color : var(--color3);
+}
 .footer h1 i {
     font-size : inherit;
+    color : var(--color3);
 }
 .footer div {
     padding-left : 10%;
@@ -473,10 +493,10 @@ iframe {
 }
 .footer a:hover {
     transform : scale(1.05);
-    transition : 0.2s ease-in-out;
+    transition : transform 0.2s ease-in-out;
     cursor: pointer;
     text-decoration : underline;
-    color : var(--color1);
+    color : var(--color3);
 }
 .footer a:active {
     transform : scale(0.95);
@@ -735,6 +755,7 @@ iframe {
     }
     .box {
         margin : 0;
+        position : relative;
     }
     .front h2{
         display : flex;
